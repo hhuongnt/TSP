@@ -1,7 +1,8 @@
+#!/usr/bin/env python
 import argparse
 
 
-def take_filename(cmd_line):
+def take_filename():
     """
     Read commandline and return the argument as filename
     """
@@ -16,9 +17,7 @@ def readfile(filename):
     """
     Read the input file and return 3 values in the data list
     @parameters:
-    data[0]: city name
-    data[1]: latitude
-    data[2]: longtitude
+    data[0]: [city name, latitude, longtitude]
     """
     data = []
     try:
@@ -27,9 +26,8 @@ def readfile(filename):
             splited_line = line.split(',')
             data.append(splited_line)
         return data
-    except FileNotFound():
+    except FileNotFoundError:
         print ('File not found')
 
 
-data = readfile('vietnam_cities.csv.json')
-print (data[1])
+print (take_filename())
