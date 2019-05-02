@@ -31,15 +31,25 @@ def get_node_city(filename):
         print ('File not found')
 
 
-class Node(lati, longti, city_name):
-    def _init_():
-        self.lati = lati
-        self.longti = longti
+class Node:
+    def __init__(self, latitude, longtitude, city_name):
+        self.lati = float(latitude)
+        self.longti = float(longtitude)
         self.city_name = city_name
 
 
-def get_distance(start_city, end_city):
-    lati_distance = end_city.lati - start_city.lati
-    longti_distance = end_city.longti - start_city.longti
-    distance = sqrt(pow(lati_distance,2) + pow(longti_distance,2))
-    return distance
+class Graph:
+    def __init__(self, distance):
+        self.distance = distance
+        self.list_node = []
+
+
+    def add_node(Node(data[0], data[1], data[2])):
+        self.list_node.append(Node)
+
+
+    def get_distance(start_city, end_city):
+        lati_distance = end_city.lati - start_city.lati
+        longti_distance = end_city.longti - start_city.longti
+        distance = sqrt(pow(lati_distance,2) + pow(longti_distance,2))
+        return distance
