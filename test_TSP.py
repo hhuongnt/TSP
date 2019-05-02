@@ -44,8 +44,8 @@ class Graph:
         self.list_node = []
 
 
-    def add_node(Node(data[0], data[1], data[2])):
-        self.list_node.append(Node)
+    def add_node(node):
+        self.list_node.append(node)
 
 
     def get_distance(start_city, end_city):
